@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
 
 from sklearn import datasets
 from sklearn.neighbors import KNeighborsClassifier
@@ -12,16 +7,3 @@ y=iris.target
 estimator = KNeighborsClassifier(n_neighbors=1)
 estimator.fit(x,y)
 print( estimator.predict([[3,4,5,2]]) )
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-

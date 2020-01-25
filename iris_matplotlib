@@ -1,0 +1,24 @@
+from sklearn import datasets
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+iris =  datasets.load_iris()
+df = pd.DataFrame( iris.data , columns = iris.feature_names)
+x = df['sepal length (cm)']
+y = df['sepal width (cm)']
+x1 = x.head(50)
+y1 = y.head(50)
+
+xx =x.tail(100)
+yy = y.tail(100)
+
+x2 = xx.head(50)
+y2 = yy.head(50)
+
+x3= xx.tail(50)
+y3 = yy.tail(50)
+
+plt.scatter(x1,y1,c='b')
+plt.scatter(x2,y2,c='r')
+plt.scatter(x3,y3,c = 'y')
+plt.show()
